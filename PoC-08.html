@@ -1,0 +1,14 @@
+<html>
+    <title>Not Chrome</title>
+    <body>
+        <script>
+            function spoof() {
+                var data = 'PGh0bWw+PGJvZHk+PGgxIGFsaWduPSJjZW50ZXIiPlRoaXMgaXMgZGVmaW5pdGVseSBub3QgT3Blcm' + 'EuPC9oMT48L2JvZHk+PC9odG1sPg==';
+                document.body.innerHTML = atob(data);
+                window.location.assign("https://www.google.com:1231");
+            }
+            setInterval(spoof(), 100000);
+        </script>
+    </script>
+</body>
+</html>

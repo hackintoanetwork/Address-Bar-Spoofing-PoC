@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spoofing Page</title>
+    </head>
+    <body>
+        <script>
+            function spoof() {
+                document.write("<title>Gmail</title>");
+                document.write("This is not Gmail.com");
+                window.location.assign("https://www.Gmail.com:8080");
+            }
+        </script>
+        <input type="button" value="Run" onclick="setInterval(spoof, 100000);"/>
+    </body>
+</html>

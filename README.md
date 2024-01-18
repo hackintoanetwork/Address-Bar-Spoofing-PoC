@@ -1,5 +1,5 @@
 # Address Bar Spoofing PoC Collection
----
+
 ## POC-01.html
 ```html
 <!DOCTYPE html>
